@@ -36,6 +36,6 @@ The "data" directory included here should load without problems on ESP8266 board
 
 You can find a metric ton of Z-Code games on line.  Use your favourite search engine to look for "interactive fiction zcode", or jump straight to http://www.ifarchive.org/indexes/if-archiveXgamesXzcode.html for a nicely formatted index page for the ifarchive site.  Note that most .z3-.z8 files should work (after a fashion), but .blorb/.zblorb files will not (currently).  Loading lots of games will weigh down your ESP8266 board on the side where the flash chip is and may cause it to become slightly lopsided.  If you find this happens (or the initial load of the selected game file fails), you should remove files one by one and rebuild/reload the SPIFFS image.
 
-
+Note that the WiFi on the ESP8266 is currently disabled, but it will work normally if `//WiFisetup()` is uncommented in ESP_Zork.ino.
 
 
