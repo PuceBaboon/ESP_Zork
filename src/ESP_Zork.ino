@@ -27,7 +27,7 @@
 
 
 /*
- * Calls to exit() from Frotz indicate a fatal
+ * Calls to exit() from AZIP/JZip indicate a fatal
  * error of some sort, so notify the user and
  * initiate a restart of the ESP8266.
  */
