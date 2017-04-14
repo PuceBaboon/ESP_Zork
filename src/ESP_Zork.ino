@@ -1,5 +1,5 @@
 /*
- *    $Id: ESP_Zork.ino,v 1.8 2017/04/10 14:43:15 gaijin Exp $
+ *    $Id: ESP_Zork.ino,v 1.11 2017/04/14 12:52:47 gaijin Exp $
  *
  * Zork for the ESP8266.
  *
@@ -27,8 +27,8 @@
 
 
 /*
- * Calls to exit() from AZIP/JZip indicate a fatal
- * error of some sort, so notify the user and
+ * Calls to exit() indicate a fatal error
+ * of some sort, so notify the user and
  * initiate a restart of the ESP8266.
  */
 //extern "C" void esp_osfatal(const char *);
@@ -155,7 +155,9 @@ void loop() {
      * flag has been set, so we're going to restart the ESP.
      */
     Serial.println(F("\n\tHalting..."));
+    close_story();	// Close our open memory core file.
     Ydelay(4000);
     ESP.reset();
 
 }   /* main */
+

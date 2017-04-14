@@ -67,23 +67,24 @@ void z_show_status( void )
     //write_string("\n\n[ ");
 
     /* Print the object description for global variable 16 */
-
     if ( load_variable( 16 ) != 0 )
         z_print_obj( load_variable( 16 ) );
 
     if ( get_byte( H_CONFIG ) & CONFIG_TIME )
     {
-
-        /* If a time display print the hours and minutes from global
-        * variables 17 and 18 */
+        /* 
+	 * If a time display  - print the hours and minutes 
+	 * from global variables 17 and 18.
+	 */
         //write_string( " Time: " );
         print_time( load_variable( 17 ), load_variable( 18 ) );
     }
     else
     {
-
-        /* If a moves/score display print the score and moves from global
-        * variables 17 and 18 */
+        /* 
+	 * If a moves/score display  - print the score and moves 
+	 * from global variables 17 and 18.
+	 */ 
         //write_string( " Score: " );
         z_print_num( load_variable( 17 ) );
 

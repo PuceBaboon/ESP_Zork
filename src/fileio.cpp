@@ -133,9 +133,9 @@ void open_story(void) {
  *
  * Close game file if open.
  */
-//void close_story(void) {
-//        game.close();
-//} /* close_story */
+void close_story(void) {
+        game.close();
+} /* close_story */
 
 
 /*
@@ -273,7 +273,6 @@ zbyte_t read_code_byte(void) {
 *
 * Read a word from the data area.
 */
-
 zword_t read_data_word(unsigned long *addr) {
     zword_t w;
 

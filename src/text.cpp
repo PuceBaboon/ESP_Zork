@@ -634,6 +634,7 @@ void z_print_ret(void) {
 */
 void z_new_line(void) {
     write_char('\n');
+    write_char('\r');
 }                               /* z_new_line */
 
 
