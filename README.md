@@ -16,7 +16,7 @@ This is a work in progress and, although it does work (as of April 2017), it is 
 
 ## The Bad
 * Did I mention it was SL..O..O..O...W?
-* Constantly reads/writes to SPIFFS.
+* Constantly reads/writes to SPIFFS.  Will eventually burn a hole in the bottom of your flash chip and leave smoking lumps of dead NAND all over your carpet.
 * Terminal I/O currently screwed up.
 * Games other than Zork (which is quite small) tend to be *unbelievably* sl..o..o..o...w (as in wait 5-minutes for a prompt).
 * The combination of the terminal and game-size/speed issues make the other included games an interesting curiosity, rather than a real bonus.
@@ -37,5 +37,6 @@ The "data" directory included here should load without problems on ESP8266 board
 You can find a metric ton of Z-Code games on line.  Use your favourite search engine to look for "interactive fiction zcode", or jump straight to http://www.ifarchive.org/indexes/if-archiveXgamesXzcode.html for a nicely formatted index page for the ifarchive site.  Note that most .z3-.z8 files should work (after a fashion), but .blorb/.zblorb files will not (currently).  Loading lots of games will weigh down your ESP8266 board on the side where the flash chip is and may cause it to become slightly lopsided.  If you find this happens (or the initial load of the selected game file fails), you should remove files one by one and rebuild/reload the SPIFFS image.
 
 Note that the WiFi on the ESP8266 is currently disabled, but it will work normally if `//WiFisetup()` is uncommented in ESP_Zork.ino.
+
 
 
